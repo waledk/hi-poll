@@ -17,7 +17,7 @@ include_once hipoll_get_path('includes/class-hipoll.php');
 // Include action hooks
 include_once hipoll_get_path('includes/action-hooks.php');
 
-// Create plugin's tables in database
+// Create plugin tables in database
 register_activation_hook(__FILE__, 'hipoll_after_activate');
 function hipoll_after_activate() {
 	global $wpdb;
