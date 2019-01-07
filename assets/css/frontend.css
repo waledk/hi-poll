@@ -1,0 +1,124 @@
+.hipoll-frontend-poll {
+    width: 100%;
+    display: inline-block;
+    margin: 10px 0;
+}
+.hipoll-frontend-poll .poll-container {
+    width: 302px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fcfcfc;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+}
+.hipoll-frontend-poll .poll-container>* {
+    width: 100%;
+    display: grid;
+}
+.hipoll-frontend-poll .poll-container .poll-image {
+    width: calc(100% + 2px);
+    margin: -1px -1px 0;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+.hipoll-frontend-poll .poll-container .poll-image img {
+    width: 100%;
+}
+.hipoll-frontend-poll .poll-container .poll-title, .hipoll-frontend-poll .poll-container .poll-options {
+    padding: 12px 12px 12px;
+}
+.hipoll-frontend-poll .poll-container .poll-title p {
+    display: block;
+    font: 600 18px sans-serif;
+    color: #555;
+    line-height: 25px;
+    padding: 0 5px;
+    margin: 7px 0 0;
+}
+.hipoll-frontend-poll .poll-container .poll-options .poll-single-option {
+    margin: 0 0 10px 0;
+    position: relative;
+}
+.hipoll-frontend-poll .poll-container .poll-options .poll-single-option:last-child {
+    margin: 0;
+}
+.hipoll-frontend-poll .poll-container .poll-options .poll-single-option .progress {
+    width: 0%;
+    height: 4px;
+    display: block;
+    background: #058acd;
+    position: absolute;
+    bottom: -2px;
+    border-radius: 50px;
+    transition-duration: .3s;
+}
+.hipoll-frontend-poll .poll-container .poll-options .poll-single-option label {
+    width: 100%;
+    display: inline-block;
+    background: rgba(170, 170, 170, 0.1);
+    padding: 10px 10px;
+    margin: 0;
+    border-radius: 5px;
+    color: #555;
+    font: 100 14px sans-serif;
+    cursor: pointer;
+}
+.hipoll-frontend-poll .poll-container .poll-options .poll-single-option label::after {
+    content: attr(data-percent);
+    float: right;
+    font: 600 14px sans-serif;
+}
+.hipoll-frontend-poll.voted .poll-single-option label {
+    pointer-events: none;
+}
+.hipoll-frontend-poll.voted .poll-single-option label input[type="radio"]{
+    display: none;
+}
+
+/* Customize Radio Inputs */
+.hipoll-frontend-poll input[type="radio"] {
+    margin-right: 10px;
+    -webkit-appearance: none;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background: #fefefe;
+    border: 2px solid #555;
+    border-radius: 50px;
+    position: relative;
+    top: 1px;
+    vertical-align: bottom;
+    outline: 0;
+    box-shadow: none;
+}
+.hipoll-frontend-poll input[type="radio"]::before {
+    display: none !important;
+}
+.hipoll-frontend-poll input[type="radio"]:checked::after {
+    content: '';
+    width: 50%;
+    height: 50%;
+    display: block;
+    background-color: #058acd;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.hipoll-frontend-poll input[type="radio"]:checked {
+    border-color: #058acd;
+}
+ /* Dark Mode */
+ .hipoll-frontend-poll.dark-mode .poll-container {
+    background-color: #161d20;
+    border-color: #161d20;
+}
+.hipoll-frontend-poll.dark-mode .poll-container .poll-title p {
+    color: #fafafa;
+}
+.hipoll-frontend-poll.dark-mode .poll-container .poll-options .poll-single-option label {
+    color: #ececec;
+}

@@ -1,0 +1,316 @@
+#hipoll-container {
+    display: block;
+    margin: 0 20px 0 0;
+}
+#hipoll-container * {
+    box-sizing: border-box;
+}
+#hipoll-container a {
+    text-decoration: none;
+    color: #1088e7;
+}
+#hipoll-container a:hover {
+    color: #076ebe;
+}
+#hipoll-container input[type="text"], #hipoll-container select {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    background-color: #fdfdfd;
+    color: #555;
+    border: 1px solid #bbb;
+    padding: 10px;
+    margin: 0;
+    border-radius: 3px;
+    font: 100 14px sans-serif;
+}
+#hipoll-container input[type="text"]:focus, #hipoll-container select:focus {
+    border-color: #26a3e3;
+    background: #fafcff;
+}
+#hipoll-container select {
+    width: auto;
+    padding: 7px;
+}
+#hipoll-container .page-title {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 10px 0;
+    margin: 15px 0 15px 0;
+    align-items: center;
+}
+#hipoll-container .page-title h1 {
+    color: #444;
+    font-size: 22px;
+    display: inline-block;
+}
+#hipoll-container .page-title>*:nth-child(2) {
+    margin-left: auto;
+}
+#hipoll-container .page-title .hipoll-delete {
+    margin-right: 20px;
+    color: #f44336;
+    border-radius: 3px;
+    font-weight: 600;
+    box-shadow: none;
+}
+#hipoll-container .page-title .btn {
+    text-decoration: none;
+    background: #0c73d9;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: 0;
+    font-weight: 600;
+    font-size: 13px;
+    outline: 0;
+    cursor: pointer;
+}
+#hipoll-container .page-content .column {
+    display: inline-block;
+    padding: 0 8px;
+}
+#hipoll-container .page-content .column.small {
+    width: 40%;
+    float: right;
+}
+#hipoll-container .page-content .column.large {
+    width: 60%;
+}
+#hipoll-container .page-content .column .box {
+    width: 100%;
+    display: block;
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+#hipoll-container .page-content .column .box .box-title {
+    width: calc(100% + 30px);
+    background: #fafafa;
+    color: #555;
+    border-bottom: 1px solid #dfdfdf;
+    font: 600 14px sans-serif;
+    padding: 15px;
+    margin: -15px 0 15px -15px;
+}
+#hipoll-container .page-content .column .box .setting {
+    width: 100%;
+    padding: 0 0 10px;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #eee;
+}
+#hipoll-container .page-content .column .box .setting:last-child {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+#hipoll-container .page-content .column .box .setting .setting-title {
+    min-width: 80px;
+    color: #555;
+    font-weight: 600;
+    font-size: 13px;
+    float: left;
+    margin: 5px 10px;
+}
+#hipoll-container .hipoll-options-list ul li {
+    cursor: move;
+    padding-left: 10px;
+    border-left: 4px solid #555;
+}
+#hipoll-container .hipoll-options-list ul li.ui-sortable-helper {
+    border-color: #00A0F0;
+}
+#hipoll-container .hipoll-options-list input[type="text"] {
+    width: calc(100% - 35px);
+    display: inline-block;
+    float: left;
+    margin-right: 3px;
+}
+#hipoll-container .hipoll-options-list .new-option {
+    display: block;
+    background-color: #eaeaea;
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+    border: 0;
+    padding: 10px 20px;
+    margin: 0 auto;
+    border-radius: 50px;
+    outline: 0;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+#hipoll-container .hipoll-options-list .new-option:hover {
+    background-color: #00A0F0;
+    color: #fff;
+}
+#hipoll-container .hipoll-delete-btn {
+    width: 32px;
+    height: 35px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+#hipoll-container .hipoll-delete-btn::before, #hipoll-container .hipoll-delete-btn::after {
+    content: "";
+    width: 60%;
+    height: 3px;
+    display: block;
+    background-color: #555;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: rotate(45deg);
+}
+#hipoll-container .hipoll-delete-btn::after {
+    transform: rotate(-45deg);
+}
+#hipoll-container .hipoll-delete-btn:hover::before, #hipoll-container .hipoll-delete-btn:hover::after {
+    background-color: #F44336;
+}
+#hipoll-container .hipoll-table {
+    width: 100%;
+    display: table;
+    background-color: #fff;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: 100 14px sans-serif;
+    text-align: left;
+    overflow: hidden;
+}
+#hipoll-container .hipoll-table .thead {
+    display: table-header-group;
+}
+#hipoll-container .hipoll-table .tr {
+    width: 100%;
+    display: table-row;
+}
+#hipoll-container .hipoll-table .th {
+    display: table-cell;
+}
+#hipoll-container .hipoll-table .tbody {
+    width: 100%;
+    display: table-row-group;
+}
+#hipoll-container .hipoll-table .tr .th {
+    border: solid 1px #dbdbdb;
+    color: #7f7e7e;
+    padding: 15px;
+    text-align: left;
+}
+#hipoll-container .hipoll-table .thead .tr .th {
+    background-color: #23282d;
+    color: #fff;
+    border-color: #23282d;
+}
+#hipoll-container .hipoll-table .tbody .tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+/* Pagination Style */
+#hipoll-container .pagination {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+#hipoll-container .pagination .page-numbers {
+    min-width: 15px;
+    display: inline-block;
+    background-color: #fffdfd;
+    color: #6c6c6c;
+    font-size: 14px;
+    padding: 7px 12px;
+    margin: 0 2px;
+    border-radius: 3px;
+    transition-duration: .3s;
+}
+#hipoll-container .pagination .page-numbers:not(.current):not(.dots):hover {
+    background-color: #dfdfdf;
+}
+#hipoll-container .pagination .page-numbers.current {
+    background-color: #0c73d9;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+#hipoll-container .pagination .page-numbers.dots {
+    background-color: #dfe1e3;
+}
+
+/* Select Media Styles */
+#hipoll-container .hipoll-select-media {
+    width: 100%;
+    display: block;
+}
+#hipoll-container .hipoll-select-media input[type="text"], #hipoll-container .hipoll-select-media .select {
+    width: auto;
+    display: inline-block;
+}
+#hipoll-container .hipoll-select-media .select {
+    background-color: #373737;
+    border: 0px solid #cccc;
+    color: rgba(255, 255, 255, 0.95);
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 3px;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+#hipoll-container .hipoll-select-media .select:hover {
+    opacity: .9;
+}
+#hipoll-container .hipoll-select-media .preview {
+    width: 100%;
+    margin-top: 10px;
+}
+#hipoll-container .hipoll-select-media .preview .single-image {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 5px;
+}
+#hipoll-container .hipoll-select-media .preview .single-image:hover .delete-image {
+    opacity: 1;
+}
+#hipoll-container .hipoll-select-media .preview .single-image .delete-image {
+    height: initial;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: 8px 20px;
+    background-color: #F44336;
+    color: #fff;
+    font: 600 15px sans-serif;
+    border: 0;
+    border-radius: 100px;
+    opacity: 0;
+    transition-duration: .3s;
+    cursor: pointer;
+    z-index: 9999;
+}
+#hipoll-container .hipoll-select-media .preview .single-image img {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
